@@ -177,7 +177,8 @@ def signup():
         name = data.get("name")
         email = data.get("email")
         password = data.get("password")
-
+        if not (email.endswith("@student.nitw.ac.in") or email.endswith("@nitw.ac.in")):
+            return jsonify({"message": "Use only your institute ID", "success": False}), 400
         # Validate required fields
         if not all([name, email, password]):
             return jsonify({"message": "Missing required fields (name, email, password)", "success": False}), 400
@@ -231,6 +232,7 @@ def login():
 
         # Extract credentials
         email = data.get("email")
+        email=email.lower()
         password = data.get("password")
 
         # Validate required fields
