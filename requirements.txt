@@ -1,5 +1,6 @@
-Flask==2.3.2
-Flask-PyMongo==2.3.0
-Flask-Cors==3.0.10
-pymongo==4.5.0
+Flask
+flask-cors
+pymongo
+python-dotenv
+flask-jwt-extended
 gunicorn
