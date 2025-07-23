@@ -12,7 +12,7 @@ load_dotenv()
 
 frontend=os.getenv("FRONTEND")
 app = Flask(__name__)
-CORS(app, origins=frontend, supports_credentials=True)
+CORS(app, supports_credentials=True)
 
 
 
